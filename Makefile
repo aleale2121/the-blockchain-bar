@@ -1,5 +1,9 @@
 tbb-build:
-	go build ./cmd/tbb/... 
-	mv ./tbb ./bin
+	go install ./cmd/tbb...
+
+	go install ./cmd/tbbmigrate...
+
+tbb-migrate:
+	tbbmigrate
 tbb-balances:
-	./bin/tbb balances list
+	tbb balances list
